@@ -62,10 +62,16 @@ The system is designed with a layered architecture:
 
   steps:
     - "Clone the repository: git clone https://github.com/your-username/Sales-Management-System.git"
-    - "Open the solution in Visual Studio"
-    - "Update the connection string in DatabaseHelper.cs"
-    - "Build the solution"
-    - "Run the application"
+    
+        - "Open the solution in Visual Studio"
+        
+            - "Update the connection string in DatabaseHelper.cs"
+            
+                - "Build the solution"
+                
+                    - "Run the application"
+
+
     
 ---
 
