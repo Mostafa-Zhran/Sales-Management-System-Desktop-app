@@ -25,21 +25,13 @@ The system is designed with a layered architecture:
 - 💾 Database integration with SQL Server.  
 - 🏗️ Clean layered architecture (DAL, BLL, PL).
 
-- Features:
-  - Manage Customers (add, update, delete, view)
-  - Manage Products and Categories
-  - Manage Customer Orders and Sales Orders
-  - Manage Stock and Stock Details
-  - CRUD operations for all entities
-  - Database integration with SQL Server
-  - Clean layered architecture (DAL, BLL, PL)
 
-architecture:
+## ✨Architecture:
   PL (Presentation Layer): "Windows Forms UI"
   BLL (Business Logic Layer): "Business rules and services"
   DAL (Data Access Layer): "Entities and database access"
 
-project_structure:
+## project_structure:
   SalesManagementSystem.PL:
     - Forms (UI forms for Customers, Orders, Stock, etc.)
     - Program.cs
@@ -50,12 +42,12 @@ project_structure:
     - DatabaseHelper.cs
   readme: "README.md"
 
-requirements:
+## Requirements:
   - Visual Studio 2022
   - .NET Core
   - SQL Server (Express / Standard / Developer)
 
-  - setup:
+## setup:
   steps:
     - "Clone the repository: git clone https://github.com/your-username/Sales-Management-System.git"
     - "Open the solution in Visual Studio"
@@ -63,7 +55,7 @@ requirements:
     - "Build the solution"
     - "Run the application"
 
-database:
+## 💾 Database:
   tables:
     - Customers
     - Categories
@@ -72,4 +64,4 @@ database:
     - Stock
     - Order Details
 
-Aauthor: "[https://mostafazahran.netlify.app/]"
+## Aauthor: "[https://mostafazahran.netlify.app/]"
