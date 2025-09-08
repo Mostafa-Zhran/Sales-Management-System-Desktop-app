@@ -61,7 +61,8 @@ The system is designed with a layered architecture:
 ## ✨Setup:
 
   steps:
-    - "Clone the repository: git clone https://github.com/your-username/Sales-Management-System.git"
+  
+      - "Clone the repository: git clone https://github.com/Mostafa-Zhran/Sales-Management-System-Desktop-app.git "
     
         - "Open the solution in Visual Studio"
         
