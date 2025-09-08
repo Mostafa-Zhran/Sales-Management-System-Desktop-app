@@ -36,7 +36,7 @@ The system is designed with a layered architecture:
   DAL (Data Access Layer): "Entities and database access"
   
 ---
-## Project_structure:
+## ✨Project_structure:
 
   SalesManagementSystem.PL:
     - Forms (UI forms for Customers, Orders, Stock, etc.)
@@ -50,7 +50,7 @@ The system is designed with a layered architecture:
   
   ---
 
-## 📦Requirements:
+## ✨Requirements:
 
   - Visual Studio 2022
   - .NET Core
@@ -58,7 +58,7 @@ The system is designed with a layered architecture:
     
     ---
 
-## 🔄Setup:
+## ✨Setup:
 
   steps:
     - "Clone the repository: git clone https://github.com/your-username/Sales-Management-System.git"
@@ -69,7 +69,7 @@ The system is designed with a layered architecture:
     
 ---
 
-## 💾 Database:
+## ✨Database:
 
   tables:
     - Customers
