@@ -32,20 +32,27 @@ The system is designed with a layered architecture:
 ## ✨Architecture:
 
   PL (Presentation Layer): "Windows Forms UI"
+  
   BLL (Business Logic Layer): "Business rules and services"
+  
   DAL (Data Access Layer): "Entities and database access"
   
 ---
 ## ✨Project_structure:
 
   SalesManagementSystem.PL:
+  
     - Forms (UI forms for Customers, Orders, Stock, etc.)
     - Program.cs
+    
   SalesManagementSystem.BLL:
+  
     - Services (Business services for entities)
   SalesManagementSystem.DAL:
+  
     - Entity (Entity classes: Customer, Product, Order, etc.)
     - DatabaseHelper.cs
+    
   readme: "README.md"
   
   ---
@@ -53,7 +60,9 @@ The system is designed with a layered architecture:
 ## ✨Requirements:
 
   - Visual Studio 2022
+    
   - .NET Core
+    
   - SQL Server (Express / Standard / Developer)
     
     ---
@@ -79,6 +88,7 @@ The system is designed with a layered architecture:
 ## ✨Database:
 
   tables:
+  
     - Customers
     - Categories
     - Products
