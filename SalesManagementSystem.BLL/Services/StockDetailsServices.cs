@@ -22,32 +22,20 @@ namespace SalesManagementSystem.BLL.Services
                 StockDetails StockDetails = new StockDetails();
                 StockDetails.Id = (int)(dataRow["StockDetailsID"]);
                 StockDetails.StockId = (int)(dataRow["StockId"]);
-                StockDetails.SaleOedrId = (int)(dataRow["SaleOedrId"]);
-                StockDetails.Quantity = (int)(dataRow["Quantity"]);
+                StockDetails.SaleOedrId = (int)(dataRow["SaleOrderID"]);
+                StockDetails.StockType = (type)Enum.Parse(typeof(type), dataRow["Type"].ToString());
+                StockDetails.Money = (decimal)(dataRow["Money"]);
+                StockDetails.DateTime = (DateTime)((dataRow["Time"]));
                 StockDetailss.Add(StockDetails);
             }
             return StockDetailss;
         }
-        // Select StockDetails by ID 
-        public static StockDetails GetStockDetailsByID(int ID)
+        public static bool AddStockDetails(StockDetails stockDetails)
         {
-            DataTable dataTable = DatabaseHelper.ExecuteQuery($"Select * from StockDetails Where ID ={ID}");
-            if (dataTable.Rows.Count == 0)
-            {
-                return null;
-            }
-            StockDetails StockDetails = new StockDetails();
-
-            foreach (DataRow dataRow in dataTable.Rows)
-            {
-                StockDetails StockDetails1 = new StockDetails();
-                StockDetails1.Id = (int)(dataRow["StockDetailsID"]);
-                StockDetails1.StockId = (int)(dataRow["StockId"]);
-                StockDetails1.SaleOedrId = (int)(dataRow["SaleOedrId"]);
-                StockDetails1.Quantity = (int)(dataRow["Quantity"]);
-
-            }
-            return StockDetails;
+            string Command = $"INSERT INTO [StockDetails] ([StockID] , [SaleOrderID], [Money], [Type], [Time])VALUES ({stockDetails.StockId},{stockDetails.SaleOedrId},  {stockDetails.Money} ,'{stockDetails.StockType}' , '{stockDetails.DateTime:yyyy-MM-dd}');";
+            return DatabaseHelper.ExecutDML(Command);
         }
+
+
     }
 }

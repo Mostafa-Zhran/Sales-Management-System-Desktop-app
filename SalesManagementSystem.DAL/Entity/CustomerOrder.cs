@@ -8,15 +8,19 @@ namespace SalesManagementSystem.DAL.Entity
 {
     public class CustomerOrder
     {
-        public int CustomerId { get; set; }
+        public int CustomerID { get; set; }
+        public string CustomerName { get; set; }
 
-        public string Name { get; set; }
-        public string Phone { get; set; }
-
-        public int OrderId { get; set; }
+        public int SaleOrderID { get; set; }
         public DateTime OrderDate { get; set; }
+        public decimal OrderTotalPrice { get; set; }
 
-        public decimal TotalOrder { get; set; }
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+        public decimal ProductQuantity { get; set; }
+        public decimal ProductPrice { get; set; }
+        public decimal ProductTotalPrice { get; set; }
+
 
 
     }

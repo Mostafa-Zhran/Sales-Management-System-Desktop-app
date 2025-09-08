@@ -10,5 +10,6 @@ namespace SalesManagementSystem.DAL.Entity
     {
         public int ID { get; set; }
         public string Location { get; set; }
+        public decimal Money { get; set; }
     }
 }

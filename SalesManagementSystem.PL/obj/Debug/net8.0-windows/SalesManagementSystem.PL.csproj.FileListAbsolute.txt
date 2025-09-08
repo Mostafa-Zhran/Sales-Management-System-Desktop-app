@@ -27,4 +27,11 @@ C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\De
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.genruntimeconfig.cache
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\ref\SalesManagementSystem.PL.dll
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmProduct.resources
-C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.MainFrom.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.sourcelink.json
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.MainForm.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Properties.Resources.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmCustomer.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmSalesOrder.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmAllCustomerOrder.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmStockDetails.resources
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.PL\obj\Debug\net8.0-windows\SalesManagementSystem.PL.Forms.FrmStocks.resources

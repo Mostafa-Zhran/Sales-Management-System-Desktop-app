@@ -29,6 +29,23 @@ namespace SalesManagementSystem.BLL.Services
             }
             return Products;
         }
+        //Get Product bu Id
+        public static Product GetProductbyId(int ID)
+        {
+            DataTable dataTable = DatabaseHelper.ExecuteQuery($"Select * from Product Where ID = {ID}");
+            Product Product = new Product();
+
+            foreach (DataRow dataRow in dataTable.Rows)
+            {
+                Product.ID = (int)(dataRow["ID"]);
+                Product.Name = (string)(dataRow["Name"]);
+                Product.BuyPrice = (decimal)(dataRow["BuyPrice"]);
+                Product.SalePrice = (decimal)(dataRow["SalePrice"]);
+                Product.CategoryId = (int)(dataRow["CategoryID"]);
+                Product.Quantity = (decimal)(dataRow["Quantity"]);
+            }
+            return Product;
+        }
         // Select Product by Pattern
         public static List<Product>  GetProductByPattern(string Pattern)
         {
@@ -79,6 +96,18 @@ namespace SalesManagementSystem.BLL.Services
         public static bool DeleteAllProduct()
         {
             string Command = $"Delete from Product";
+            return DatabaseHelper.ExecutDML(Command);
+        }
+
+        public static bool UpdateProductAfterSale(List<Product> Products)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var Product in Products)
+            {
+                sb.Append($"Update Product Set [Quantity] = [Quantity] - {Product.Quantity} where ID = {Product.ID} ;");
+            }
+            string Command = sb.ToString();
+
             return DatabaseHelper.ExecutDML(Command);
         }
 

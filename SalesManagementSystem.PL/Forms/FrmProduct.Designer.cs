@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button1 = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            label8 = new Label();
             txtID = new TextBox();
             txtName = new TextBox();
             label2 = new Label();
@@ -43,6 +45,12 @@
             btnSearch = new Button();
             Search = new TextBox();
             dvgSerach = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
             nudSalePrice = new NumericUpDown();
             nudQuantity = new NumericUpDown();
             nudBuyPrice = new NumericUpDown();
@@ -51,13 +59,8 @@
             label6 = new Label();
             cbCategory = new ComboBox();
             label7 = new Label();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dvgSerach).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudSalePrice).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
@@ -67,6 +70,7 @@
             // panel1
             // 
             panel1.BackColor = Color.DarkSlateGray;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -74,8 +78,21 @@
             panel1.Size = new Size(1010, 78);
             panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Teal;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(22, 20);
+            button1.Name = "button1";
+            button1.Size = new Size(81, 38);
+            button1.TabIndex = 22;
+            button1.Text = "رجوع";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Dubai", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
@@ -89,14 +106,28 @@
             // panel2
             // 
             panel2.BackColor = Color.DarkSlateGray;
+            panel2.Controls.Add(label8);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 664);
             panel2.Name = "panel2";
             panel2.Size = new Size(1010, 86);
             panel2.TabIndex = 1;
             // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.Bottom;
+            label8.AutoSize = true;
+            label8.Font = new Font("Dubai", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(385, 52);
+            label8.Name = "label8";
+            label8.Size = new Size(251, 25);
+            label8.TabIndex = 1;
+            label8.Text = "All rights reserved @ Mostafa Zahran";
+            // 
             // txtID
             // 
+            txtID.Anchor = AnchorStyles.Top;
             txtID.Location = new Point(52, 129);
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
@@ -105,6 +136,7 @@
             // 
             // txtName
             // 
+            txtName.Anchor = AnchorStyles.Top;
             txtName.Location = new Point(351, 129);
             txtName.Name = "txtName";
             txtName.Size = new Size(223, 36);
@@ -112,6 +144,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
             label2.Location = new Point(52, 88);
             label2.Name = "label2";
@@ -121,6 +154,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
             label3.Location = new Point(354, 88);
             label3.Name = "label3";
@@ -130,6 +164,7 @@
             // 
             // btnNew
             // 
+            btnNew.Anchor = AnchorStyles.Top;
             btnNew.BackColor = Color.MediumAquamarine;
             btnNew.Location = new Point(11, 302);
             btnNew.Name = "btnNew";
@@ -141,6 +176,7 @@
             // 
             // btnAdd
             // 
+            btnAdd.Anchor = AnchorStyles.Top;
             btnAdd.BackColor = Color.MediumAquamarine;
             btnAdd.Location = new Point(210, 302);
             btnAdd.Name = "btnAdd";
@@ -152,6 +188,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Anchor = AnchorStyles.Top;
             btnUpdate.BackColor = Color.MediumAquamarine;
             btnUpdate.Location = new Point(426, 302);
             btnUpdate.Name = "btnUpdate";
@@ -163,6 +200,7 @@
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Top;
             btnDelete.BackColor = Color.Red;
             btnDelete.Location = new Point(626, 302);
             btnDelete.Name = "btnDelete";
@@ -174,6 +212,7 @@
             // 
             // btnDeleteAll
             // 
+            btnDeleteAll.Anchor = AnchorStyles.Top;
             btnDeleteAll.BackColor = Color.Red;
             btnDeleteAll.Location = new Point(834, 302);
             btnDeleteAll.Name = "btnDeleteAll";
@@ -185,6 +224,7 @@
             // 
             // btnSearch
             // 
+            btnSearch.Anchor = AnchorStyles.Top;
             btnSearch.BackColor = Color.SpringGreen;
             btnSearch.Location = new Point(543, 367);
             btnSearch.Name = "btnSearch";
@@ -196,6 +236,7 @@
             // 
             // Search
             // 
+            Search.Anchor = AnchorStyles.Top;
             Search.Location = new Point(224, 367);
             Search.Name = "Search";
             Search.Size = new Size(298, 36);
@@ -203,6 +244,7 @@
             // 
             // dvgSerach
             // 
+            dvgSerach.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dvgSerach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgSerach.BackgroundColor = Color.LightGray;
             dvgSerach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -214,71 +256,6 @@
             dvgSerach.TabIndex = 13;
             dvgSerach.CellContentClick += dvgSerach_CellContentClick;
             dvgSerach.CellMouseClick += dvgSerach_CellMouseClick;
-            // 
-            // nudSalePrice
-            // 
-            nudSalePrice.Location = new Point(52, 214);
-            nudSalePrice.Name = "nudSalePrice";
-            nudSalePrice.Size = new Size(231, 36);
-            nudSalePrice.TabIndex = 14;
-            // 
-            // nudQuantity
-            // 
-            nudQuantity.Location = new Point(703, 214);
-            nudQuantity.Name = "nudQuantity";
-            nudQuantity.Size = new Size(207, 36);
-            nudQuantity.TabIndex = 15;
-            // 
-            // nudBuyPrice
-            // 
-            nudBuyPrice.Location = new Point(351, 214);
-            nudBuyPrice.Name = "nudBuyPrice";
-            nudBuyPrice.Size = new Size(223, 36);
-            nudBuyPrice.TabIndex = 16;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(52, 168);
-            label4.Name = "label4";
-            label4.Size = new Size(91, 29);
-            label4.TabIndex = 17;
-            label4.Text = "سعر الشراء:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(700, 168);
-            label5.Name = "label5";
-            label5.Size = new Size(58, 29);
-            label5.TabIndex = 18;
-            label5.Text = "الكميه:";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(351, 168);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 29);
-            label6.TabIndex = 19;
-            label6.Text = "سعر البيع:";
-            // 
-            // cbCategory
-            // 
-            cbCategory.FormattingEnabled = true;
-            cbCategory.Location = new Point(703, 128);
-            cbCategory.Name = "cbCategory";
-            cbCategory.Size = new Size(207, 37);
-            cbCategory.TabIndex = 20;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(703, 88);
-            label7.Name = "label7";
-            label7.Size = new Size(79, 29);
-            label7.TabIndex = 21;
-            label7.Text = "المجموعه:";
             // 
             // Column1
             // 
@@ -322,6 +299,80 @@
             Column6.MinimumWidth = 6;
             Column6.Name = "Column6";
             // 
+            // nudSalePrice
+            // 
+            nudSalePrice.Anchor = AnchorStyles.Top;
+            nudSalePrice.Location = new Point(52, 214);
+            nudSalePrice.Name = "nudSalePrice";
+            nudSalePrice.Size = new Size(231, 36);
+            nudSalePrice.TabIndex = 14;
+            // 
+            // nudQuantity
+            // 
+            nudQuantity.Anchor = AnchorStyles.Top;
+            nudQuantity.Location = new Point(703, 214);
+            nudQuantity.Name = "nudQuantity";
+            nudQuantity.Size = new Size(207, 36);
+            nudQuantity.TabIndex = 15;
+            // 
+            // nudBuyPrice
+            // 
+            nudBuyPrice.Anchor = AnchorStyles.Top;
+            nudBuyPrice.Location = new Point(351, 214);
+            nudBuyPrice.Name = "nudBuyPrice";
+            nudBuyPrice.Size = new Size(223, 36);
+            nudBuyPrice.TabIndex = 16;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top;
+            label4.AutoSize = true;
+            label4.Location = new Point(52, 168);
+            label4.Name = "label4";
+            label4.Size = new Size(91, 29);
+            label4.TabIndex = 17;
+            label4.Text = "سعر الشراء:";
+            // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top;
+            label5.AutoSize = true;
+            label5.Location = new Point(700, 168);
+            label5.Name = "label5";
+            label5.Size = new Size(58, 29);
+            label5.TabIndex = 18;
+            label5.Text = "الكميه:";
+            // 
+            // label6
+            // 
+            label6.Anchor = AnchorStyles.Top;
+            label6.AutoSize = true;
+            label6.Location = new Point(351, 168);
+            label6.Name = "label6";
+            label6.Size = new Size(82, 29);
+            label6.TabIndex = 19;
+            label6.Text = "سعر البيع:";
+            // 
+            // cbCategory
+            // 
+            cbCategory.Anchor = AnchorStyles.Top;
+            cbCategory.FormattingEnabled = true;
+            cbCategory.Location = new Point(703, 128);
+            cbCategory.Name = "cbCategory";
+            cbCategory.Size = new Size(207, 37);
+            cbCategory.TabIndex = 20;
+            cbCategory.SelectedIndexChanged += cbCategory_SelectedIndexChanged;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top;
+            label7.AutoSize = true;
+            label7.Location = new Point(703, 88);
+            label7.Name = "label7";
+            label7.Size = new Size(79, 29);
+            label7.TabIndex = 21;
+            label7.Text = "المجموعه:";
+            // 
             // FrmProduct
             // 
             AutoScaleDimensions = new SizeF(9F, 29F);
@@ -359,6 +410,8 @@
             Load += FrmProduct_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dvgSerach).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudSalePrice).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
@@ -398,5 +451,7 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private Button button1;
+        private Label label8;
     }
 }

@@ -16,6 +16,8 @@ namespace SalesManagementSystem.DAL.Entity
 
         public int SaleOrderID  { get; set; }
         public int ProductID { get; set; }
+        public string ProductName { get; set; }
+
 
 
     }

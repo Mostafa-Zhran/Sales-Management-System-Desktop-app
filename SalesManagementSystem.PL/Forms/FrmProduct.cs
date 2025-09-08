@@ -47,22 +47,22 @@ namespace SalesManagementSystem.PL.Forms
             if (string.IsNullOrEmpty(txtName.Text))
             {
                 MessageBox.Show("من فضلك ادخل اسم الصنف", "تاكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ;
+                return;
             }
             if (nudBuyPrice.Value <= 0)
             {
                 MessageBox.Show(" تاكد ان سعر الشراء اكبر من صفر", "تاكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ;
+                return;
             }
             if (nudSalePrice.Value <= 0)
             {
                 MessageBox.Show(" تاكد ان سعر البيع اكبر من صفر", "تاكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ;
+                return;
             }
             if (nudQuantity.Value <= 0)
             {
                 MessageBox.Show(" تاكد ان سعر الكميه اكبر من صفر", "تاكيد", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return ;
+                return;
             }
 
             Product Product = new Product();
@@ -245,6 +245,17 @@ namespace SalesManagementSystem.PL.Forms
             nudSalePrice.Value = Convert.ToDecimal(dvgSerach.CurrentRow.Cells[3].Value);
             nudQuantity.Value = Convert.ToDecimal(dvgSerach.CurrentRow.Cells[4].Value);
             cbCategory.SelectedValue = dvgSerach.CurrentRow.Cells[5].Value;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

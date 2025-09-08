@@ -195,7 +195,16 @@ namespace SalesManagementSystem.PL.Forms
 
         }
 
- 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Owner.Show();
+            this.Close();
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            button1 = new Button();
             label1 = new Label();
             panel2 = new Panel();
+            label4 = new Label();
             txtID = new TextBox();
             txtName = new TextBox();
             label2 = new Label();
@@ -46,12 +48,14 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dvgSerach).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.DarkSlateGray;
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
@@ -59,12 +63,25 @@
             panel1.Size = new Size(1004, 78);
             panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.Teal;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(12, 21);
+            button1.Name = "button1";
+            button1.Size = new Size(81, 38);
+            button1.TabIndex = 14;
+            button1.Text = "رجوع";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Top;
             label1.AutoSize = true;
             label1.Font = new Font("Dubai", 13.7999992F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(434, 21);
+            label1.Location = new Point(417, 14);
             label1.Name = "label1";
             label1.Size = new Size(172, 45);
             label1.TabIndex = 0;
@@ -74,31 +91,48 @@
             // panel2
             // 
             panel2.BackColor = Color.DarkSlateGray;
+            panel2.Controls.Add(label4);
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 609);
             panel2.Name = "panel2";
             panel2.Size = new Size(1004, 86);
             panel2.TabIndex = 1;
             // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Bottom;
+            label4.AutoSize = true;
+            label4.Font = new Font("Dubai", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(366, 52);
+            label4.Name = "label4";
+            label4.Size = new Size(251, 25);
+            label4.TabIndex = 15;
+            label4.Text = "All rights reserved @ Mostafa Zahran";
+            // 
             // txtID
             // 
-            txtID.Location = new Point(97, 135);
+            txtID.Anchor = AnchorStyles.Top;
+            txtID.Location = new Point(100, 131);
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
             txtID.Size = new Size(247, 36);
             txtID.TabIndex = 2;
+            txtID.TextChanged += txtID_TextChanged;
             // 
             // txtName
             // 
-            txtName.Location = new Point(541, 135);
+            txtName.Anchor = AnchorStyles.Top;
+            txtName.Location = new Point(544, 131);
             txtName.Name = "txtName";
             txtName.Size = new Size(247, 36);
             txtName.TabIndex = 3;
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.Top;
             label2.AutoSize = true;
-            label2.Location = new Point(97, 94);
+            label2.Location = new Point(100, 90);
             label2.Name = "label2";
             label2.Size = new Size(106, 29);
             label2.TabIndex = 4;
@@ -106,8 +140,9 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.Top;
             label3.AutoSize = true;
-            label3.Location = new Point(544, 94);
+            label3.Location = new Point(547, 90);
             label3.Name = "label3";
             label3.Size = new Size(111, 29);
             label3.TabIndex = 5;
@@ -115,8 +150,9 @@
             // 
             // btnNew
             // 
+            btnNew.Anchor = AnchorStyles.Top;
             btnNew.BackColor = Color.MediumAquamarine;
-            btnNew.Location = new Point(46, 244);
+            btnNew.Location = new Point(53, 204);
             btnNew.Name = "btnNew";
             btnNew.Size = new Size(132, 43);
             btnNew.TabIndex = 6;
@@ -126,8 +162,9 @@
             // 
             // btnAdd
             // 
+            btnAdd.Anchor = AnchorStyles.Top;
             btnAdd.BackColor = Color.MediumAquamarine;
-            btnAdd.Location = new Point(236, 244);
+            btnAdd.Location = new Point(243, 204);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(132, 43);
             btnAdd.TabIndex = 7;
@@ -137,8 +174,9 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Anchor = AnchorStyles.Top;
             btnUpdate.BackColor = Color.MediumAquamarine;
-            btnUpdate.Location = new Point(415, 244);
+            btnUpdate.Location = new Point(422, 204);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(132, 43);
             btnUpdate.TabIndex = 8;
@@ -148,8 +186,9 @@
             // 
             // btnDelete
             // 
+            btnDelete.Anchor = AnchorStyles.Top;
             btnDelete.BackColor = Color.Red;
-            btnDelete.Location = new Point(593, 244);
+            btnDelete.Location = new Point(600, 204);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(132, 43);
             btnDelete.TabIndex = 9;
@@ -159,8 +198,9 @@
             // 
             // btnDeleteAll
             // 
+            btnDeleteAll.Anchor = AnchorStyles.Top;
             btnDeleteAll.BackColor = Color.Red;
-            btnDeleteAll.Location = new Point(769, 244);
+            btnDeleteAll.Location = new Point(776, 204);
             btnDeleteAll.Name = "btnDeleteAll";
             btnDeleteAll.Size = new Size(132, 43);
             btnDeleteAll.TabIndex = 10;
@@ -170,8 +210,9 @@
             // 
             // btnSearch
             // 
+            btnSearch.Anchor = AnchorStyles.Top;
             btnSearch.BackColor = Color.SpringGreen;
-            btnSearch.Location = new Point(568, 309);
+            btnSearch.Location = new Point(575, 269);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(133, 40);
             btnSearch.TabIndex = 11;
@@ -181,21 +222,23 @@
             // 
             // Search
             // 
-            Search.Location = new Point(249, 309);
+            Search.Anchor = AnchorStyles.Top;
+            Search.Location = new Point(256, 269);
             Search.Name = "Search";
             Search.Size = new Size(298, 36);
             Search.TabIndex = 12;
             // 
             // dvgSerach
             // 
+            dvgSerach.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dvgSerach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dvgSerach.BackgroundColor = Color.LightGray;
             dvgSerach.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dvgSerach.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dvgSerach.Location = new Point(12, 368);
+            dvgSerach.Location = new Point(12, 327);
             dvgSerach.Name = "dvgSerach";
             dvgSerach.RowHeadersWidth = 51;
-            dvgSerach.Size = new Size(980, 235);
+            dvgSerach.Size = new Size(980, 276);
             dvgSerach.TabIndex = 13;
             dvgSerach.CellMouseClick += dvgSerach_CellMouseClick;
             // 
@@ -242,6 +285,8 @@
             Load += frmCategory_Load_1;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dvgSerach).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -266,5 +311,7 @@
         private DataGridView dvgSerach;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
+        private Button button1;
+        private Label label4;
     }
 }

@@ -13,3 +13,4 @@ C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.BLL\obj\D
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.BLL\obj\Debug\net8.0\refint\SalesManagementSystem.BLL.dll
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.BLL\obj\Debug\net8.0\SalesManagementSystem.BLL.pdb
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.BLL\obj\Debug\net8.0\ref\SalesManagementSystem.BLL.dll
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.BLL\obj\Debug\net8.0\SalesManagementSystem.BLL.sourcelink.json

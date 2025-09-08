@@ -10,3 +10,4 @@ C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.DAL\obj\D
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\net8.0\refint\SalesManagementSystem.DAL.dll
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\net8.0\SalesManagementSystem.DAL.pdb
 C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\net8.0\ref\SalesManagementSystem.DAL.dll
+C:\Users\dell\source\repos\SalesManagementSystem\SalesManagementSystem.DAL\obj\Debug\net8.0\SalesManagementSystem.DAL.sourcelink.json

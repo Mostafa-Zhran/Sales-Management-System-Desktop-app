@@ -43,6 +43,7 @@ namespace SalesManagementSystem.DAL
 
                 int RowsAffected = SQLCommand.ExecuteNonQuery();
 
+
                 SQLConnection.Close();
 
                 return RowsAffected > 0;
