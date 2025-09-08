@@ -51,7 +51,8 @@ The system is designed with a layered architecture:
   SalesManagementSystem.DAL:
   
     - Entity (Entity classes: Customer, Product, Order, etc.)
-    - DatabaseHelper.cs
+    - DatabaseHelper.cs(ADO.NET connection & queries)
+
     
   readme: "README.md"
   
