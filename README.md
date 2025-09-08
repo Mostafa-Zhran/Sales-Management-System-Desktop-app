@@ -2,8 +2,11 @@
 
 project:
   name: "Sales Management System - Desktop Application"
+  
   type: "Windows Forms Desktop App"
+  
   language: "C# (.NET Core)"
+  
   database: "SQL Server"
   
 ## 📌 Overview
@@ -31,7 +34,7 @@ The system is designed with a layered architecture:
   BLL (Business Logic Layer): "Business rules and services"
   DAL (Data Access Layer): "Entities and database access"
 
-## project_structure:
+##📊 project_structure:
   SalesManagementSystem.PL:
     - Forms (UI forms for Customers, Orders, Stock, etc.)
     - Program.cs
@@ -42,12 +45,12 @@ The system is designed with a layered architecture:
     - DatabaseHelper.cs
   readme: "README.md"
 
-## Requirements:
+##📦 Requirements:
   - Visual Studio 2022
   - .NET Core
   - SQL Server (Express / Standard / Developer)
 
-## setup:
+##🔄 setup:
   steps:
     - "Clone the repository: git clone https://github.com/your-username/Sales-Management-System.git"
     - "Open the solution in Visual Studio"
@@ -60,8 +63,9 @@ The system is designed with a layered architecture:
     - Customers
     - Categories
     - Products
-    - Orders
+    - SalrOrder
+    - SaleOrderProduct
     - Stock
-    - Order Details
+    - Stock Details
 
 ## Aauthor: "[https://mostafazahran.netlify.app/]"
